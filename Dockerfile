@@ -1,6 +1,6 @@
-FROM debian:stretch
+FROM ubuntu
 
-RUN apt-get update && apt-get install -y git ssh curl
+RUN apt-get update && apt-get install -y git ssh curl rsync
 RUN curl -sL https://deb.nodesource.com/setup_10.x | bash -
 RUN apt-get install -y nodejs
 ARG HUGO_VERSION="0.55.6"
